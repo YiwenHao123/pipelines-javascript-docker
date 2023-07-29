@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yiwenhaopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yiwenhaopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: yiwenhaopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: yiwenhaopipelinesjavascriptdocker 
+          image: yiwencontainerregistry.azurecr.io/yiwenhaopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
